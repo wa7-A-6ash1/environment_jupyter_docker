@@ -1,0 +1,15 @@
+version: '3'
+services:
+  env-jupyter-docker:
+    image: image-env-jupyter-docker
+    container_name: container-env-jupyter-docker
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
+    tty: true
+    volumes:
+      - type: bind
+        source: ./home
+        target: /home
