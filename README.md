@@ -12,8 +12,8 @@ JupyterHubの起動簡略化のためのコマンドを作成してます。
 docker-compose up -d --build
 
 # attach
-docker-compose exec env-jupyter-docker bash
+docker exec -it env-jupyter-docker bash
 
 # run JupyterHub
-$ /etc/jupyterhub/jupyter_run.sh
+source /etc/jupyterhub/jupyter_run.sh
 ```
