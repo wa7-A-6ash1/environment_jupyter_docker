@@ -1,6 +1,6 @@
 c = get_config()  # noqa
 c.LocalAuthenticator.create_system_users=True
-c.LocalAuthenticator.add_user_cmd=['/etc/jupyterhub/add_user.sh']
+c.LocalAuthenticator.add_user_cmd=['sh', '/etc/jupyterhub/add_user.sh']
 c.PAMAuthenticator.admin_groups = {'sudo'}
 
 import netifaces
